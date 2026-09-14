@@ -1,0 +1,74 @@
+/* Small compatibility fixes; main.css is the unmodified archived stylesheet. */
+main.outercontainer {
+  padding-inline: 16px;
+  padding-bottom: 6.8em;
+  text-align: center;
+}
+
+section.content {
+  display: inline-block;
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto 10px;
+  text-align: justify;
+  vertical-align: middle;
+}
+
+/* Keep the archived h3 appearance with a sequential heading hierarchy. */
+h2 {
+  font-size: 1.17em;
+  margin-block: 1em;
+}
+
+.project_headline iframe {
+  width: 720px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  /* Visible while the external player loads, including when it is blocked. */
+  background: #000 url("./video-poster.jpg") center / cover no-repeat;
+}
+
+a:focus-visible {
+  outline: 2px solid #0055aa;
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  main.outercontainer {
+    padding-inline: 24px;
+  }
+
+  div.container {
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  div.text {
+    padding-inline: 0;
+  }
+
+  div.project_title {
+    line-height: 1.4;
+  }
+
+  h1 {
+    font-size: 1.75em;
+  }
+
+  div.text,
+  section.content {
+    text-align: left;
+  }
+
+  ul {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 24px;
+  }
+
+  body {
+    font-size: 16px;
+  }
+}
